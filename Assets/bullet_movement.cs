@@ -12,11 +12,7 @@ public class bullet_movement : MonoBehaviour
     void Start()
     {
         startTime = Time.time;
-
     }
-
-
-
 
     public void shootBullet(string direction)
     {
@@ -47,6 +43,13 @@ public class bullet_movement : MonoBehaviour
             sprite.transform.rotation = Quaternion.Euler(0, 0, 0);
 
         }
+        if (direction == "upleft")
+        {
+            dir = new Vector3(-1, 1, 0);
+            sprite.transform.rotation = Quaternion.Euler(0, 0, 135);
+
+        }
+        
     }
 
     // Update is called once per frame
