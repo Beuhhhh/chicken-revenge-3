@@ -53,7 +53,7 @@ public class bullet_movement : MonoBehaviour
     {
 
         transform.Translate(dir * Time.deltaTime * 10);
-        if (Time.time - startTime > 5)
+        if (Time.time - startTime > 4)
         {
             Destroy(gameObject);
         }

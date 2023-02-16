@@ -13,10 +13,7 @@ public class fox_ai_movement : MonoBehaviour
     void Start()
     {
 
-
-
     }
-
 
     // Update is called once per frame
     void Update()
@@ -27,9 +24,6 @@ public class fox_ai_movement : MonoBehaviour
             target_chicken = GameObject.Find("player chicken");
         }
         // fox moves towards player chicken to make fox run away from player -0.01f
-        transform.position = Vector3.MoveTowards(transform.position, target_chicken.transform.position, 0.01f);
-
-
-
+        transform.position = Vector3.MoveTowards(transform.position, target_chicken.transform.position, 0.001f);
     }
 }
