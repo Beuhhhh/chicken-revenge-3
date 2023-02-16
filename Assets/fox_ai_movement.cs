@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class fox_ai_movement : MonoBehaviour
 
+
 {
-    private GameObject target_chicken;
+    public GameObject target_chicken;
+
+
     // Start is called before the first frame update
     void Start()
     {
+
 
 
     }
@@ -24,5 +28,8 @@ public class fox_ai_movement : MonoBehaviour
         }
         // fox moves towards player chicken to make fox run away from player -0.01f
         transform.position = Vector3.MoveTowards(transform.position, target_chicken.transform.position, 0.01f);
+
+
+
     }
 }
