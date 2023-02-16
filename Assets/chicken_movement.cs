@@ -18,7 +18,6 @@ public class chicken_movement : MonoBehaviour
 
 
 
-
     public string direction = "up";
 
     // Start is called before the first frame update
@@ -37,7 +36,7 @@ public class chicken_movement : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             direction = "up";
-            transform.Translate(Vector3.up * Time.deltaTime);
+            transform.Translate(Vector3.up * Time.deltaTime * 3);
             up.SetActive(true);
             down.SetActive(false);
             side.SetActive(false);
@@ -46,7 +45,7 @@ public class chicken_movement : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             direction = "down";
-            transform.Translate(Vector3.down * Time.deltaTime);
+            transform.Translate(Vector3.down * Time.deltaTime * 3);
             up.SetActive(false);
             side.SetActive(false);
             down.SetActive(true);
@@ -55,7 +54,7 @@ public class chicken_movement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             direction = "left";
-            transform.Translate(Vector3.left * Time.deltaTime);
+            transform.Translate(Vector3.left * Time.deltaTime * 3);
             up.SetActive(false);
             down.SetActive(false);
             side.SetActive(true);
@@ -65,7 +64,7 @@ public class chicken_movement : MonoBehaviour
         {
             direction = "right";
 
-            transform.Translate(Vector3.right * Time.deltaTime);
+            transform.Translate(Vector3.right * Time.deltaTime * 3);
             up.SetActive(false);
             down.SetActive(false);
             side.SetActive(true);

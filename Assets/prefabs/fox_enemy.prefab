@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 2127830154549022803}
   m_Layer: 0
   m_Name: fox_enemy
-  m_TagString: Untagged
+  m_TagString: up
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -408,6 +408,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b5e0393e69715049b9bf1daa09ca180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  up: {fileID: 2127830153048865689}
+  down: {fileID: 2127830153061191078}
+  left: {fileID: 2127830154010629167}
+  right: {fileID: 2127830154089431006}
   target_chicken: {fileID: 0}
 --- !u!61 &2127830154549022807
 BoxCollider2D:
