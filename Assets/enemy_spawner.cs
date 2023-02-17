@@ -10,15 +10,23 @@ public class enemy_spawner : MonoBehaviour
 
     [SerializeField]
     public GameObject fox_enemy;
+    [SerializeField]
+    public GameObject spawnpoint;
 
+    private float startTime;
 
-
-
+    public GameObject[] spawnpoints;
 
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.FindGameObjectsWithTag("spawnpoint");
+
+        startTime = Time.time;
+
+
+        spawnpoints = GameObject.FindGameObjectsWithTag("spawnpoint");
+
+
 
 
     }
@@ -27,6 +35,18 @@ public class enemy_spawner : MonoBehaviour
     void Update()
     {
 
+        if (Time.time - startTime > 3)
+        {
+            int randomSpawnpoint = Random.Range(0, spawnpoints.Length);
+            GameObject newEnemy = Instantiate(fox_enemy, spawnpoints[randomSpawnpoint].transform.position, Quaternion.identity);
+            startTime = Time.time;
+        }
+
+        // if (Time.time - startTime > 3)
+        // {
+        //     GameObject newEnemy = Instantiate(fox_enemy, spawnpoints.transform.position, Quaternion.identity);
+        //     startTime = Time.time;
+        // }
 
     }
 }
