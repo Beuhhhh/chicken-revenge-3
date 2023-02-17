@@ -10,8 +10,7 @@ public class enemy_spawner : MonoBehaviour
 
     [SerializeField]
     public GameObject fox_enemy;
-    [SerializeField]
-    public GameObject spawnpoint;
+
 
     private float startTime;
 
@@ -22,12 +21,7 @@ public class enemy_spawner : MonoBehaviour
     {
 
         startTime = Time.time;
-
-
         spawnpoints = GameObject.FindGameObjectsWithTag("spawnpoint");
-
-
-
 
     }
 
@@ -35,7 +29,7 @@ public class enemy_spawner : MonoBehaviour
     void Update()
     {
 
-        if (Time.time - startTime > 3)
+        if (Time.time - startTime > 2)
         {
             int randomSpawnpoint = Random.Range(0, spawnpoints.Length);
             GameObject newEnemy = Instantiate(fox_enemy, spawnpoints[randomSpawnpoint].transform.position, Quaternion.identity);

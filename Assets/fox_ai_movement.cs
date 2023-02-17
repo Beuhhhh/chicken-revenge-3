@@ -23,6 +23,8 @@ public class fox_ai_movement : MonoBehaviour
 
     private string selfDirection = "up";
 
+    private Animator animator;
+
 
 
 
@@ -31,10 +33,12 @@ public class fox_ai_movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        up.SetActive(true);
-        down.SetActive(false);
-        right.SetActive(false);
-        left.SetActive(false);
+
+        animator = GetComponent<Animator>();
+        // up.SetActive(true);
+        // down.SetActive(false);
+        // right.SetActive(false);
+        // left.SetActive(false);
     }
 
     // Update is called once per frame
@@ -52,58 +56,59 @@ public class fox_ai_movement : MonoBehaviour
         if (transform.position.x < target_chicken.transform.position.x)
         {
             selfDirection = "right";
+            animator.SetTrigger("move_right");
         }
         if (transform.position.x > target_chicken.transform.position.x)
         {
             selfDirection = "left";
+            animator.SetTrigger("move_left");
         }
         if (transform.position.y < target_chicken.transform.position.y)
         {
             selfDirection = "up";
+            animator.SetTrigger("move_up");
         }
         if (transform.position.y > target_chicken.transform.position.y)
         {
             selfDirection = "down";
+            animator.SetTrigger("move_down");
         }
 
         // fox shows fox_up sprite when moving up
 
-        if (selfDirection == "up")
-        {
-            up.SetActive(true);
-            down.SetActive(false);
-            left.SetActive(false);
-            right.SetActive(false);
-        }
-        // fox shows fox_down sprite when moving down
-        if (selfDirection == "down")
-        {
-            up.SetActive(false);
-            down.SetActive(true);
-            left.SetActive(false);
-            right.SetActive(false);
+        // if (selfDirection == "up")
+        // {
+        //     up.SetActive(true);
+        //     down.SetActive(false);
+        //     left.SetActive(false);
+        //     right.SetActive(false);
+        // }
+        // // fox shows fox_down sprite when moving down
+        // if (selfDirection == "down")
+        // {
+        //     up.SetActive(false);
+        //     down.SetActive(true);
+        //     left.SetActive(false);
+        //     right.SetActive(false);
 
-        }
-        // fox shows fox_side sprite when moving 
-        if (selfDirection == "right")
-        {
-            up.SetActive(false);
-            down.SetActive(false);
-            right.SetActive(true);
-            left.SetActive(false);
+        // }
+        // // fox shows fox_side sprite when moving 
+        // if (selfDirection == "right")
+        // {
+        //     up.SetActive(false);
+        //     down.SetActive(false);
+        //     right.SetActive(true);
+        //     left.SetActive(false);
 
-        }
-        if (selfDirection == "left")
-        {
-            up.SetActive(false);
-            down.SetActive(false);
-            right.SetActive(false);
-            left.SetActive(true);
-        }
+        // }
+        // if (selfDirection == "left")
+        // {
+        //     up.SetActive(false);
+        //     down.SetActive(false);
+        //     right.SetActive(false);
+        //     left.SetActive(true);
+        // }
     }
-
-
-
 
 
 }
