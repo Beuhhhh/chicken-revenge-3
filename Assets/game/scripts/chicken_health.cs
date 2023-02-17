@@ -20,7 +20,7 @@ public class chicken_health : MonoBehaviour
 
         if (health <= 0)
         {
-            // Destroy(gameObject);
+            Destroy(gameObject);
         }
         if (fox_damage == true)
         {

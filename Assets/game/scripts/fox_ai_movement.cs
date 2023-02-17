@@ -23,6 +23,7 @@ public class fox_ai_movement : MonoBehaviour
 
     private string selfDirection = "up";
 
+
     private Animator animator;
 
 
@@ -57,13 +58,14 @@ public class fox_ai_movement : MonoBehaviour
         {
             selfDirection = "right";
             animator.SetTrigger("move_right");
+
         }
         if (transform.position.x > target_chicken.transform.position.x)
         {
             selfDirection = "left";
             animator.SetTrigger("move_left");
         }
-        if (transform.position.y < target_chicken.transform.position.y)
+        if (transform.position.x == target_chicken.transform.position.x)
         {
             selfDirection = "up";
             animator.SetTrigger("move_up");
@@ -73,6 +75,7 @@ public class fox_ai_movement : MonoBehaviour
             selfDirection = "down";
             animator.SetTrigger("move_down");
         }
+
 
         // fox shows fox_up sprite when moving up
 
