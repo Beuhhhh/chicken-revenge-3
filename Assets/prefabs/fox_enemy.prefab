@@ -414,7 +414,7 @@ MonoBehaviour:
   down: {fileID: 2127830153061191078}
   left: {fileID: 2127830154010629167}
   right: {fileID: 2127830154089431006}
-  target_chicken: {fileID: 0}
+  target_chicken: {fileID: 8540739298156645282, guid: 685152027e47b334c87d650ca04bf068, type: 3}
 --- !u!61 &2127830154549022807
 BoxCollider2D:
   m_ObjectHideFlags: 0
