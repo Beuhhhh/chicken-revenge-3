@@ -2,3 +2,6 @@ start screen movable with level selector, horde mode, survival etc, big box with
 and add jim
 
 bonk chicken easter egg makes chicken have retard skin
+
+
+add shop for diff guns
