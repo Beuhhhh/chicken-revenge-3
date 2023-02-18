@@ -29,7 +29,7 @@ public class enemy_spawner : MonoBehaviour
     void Update()
     {
 
-        if (Time.time - startTime > 0.5)
+        if (Time.time - startTime > 3)
         {
             int randomSpawnpoint = Random.Range(0, spawnpoints.Length);
             GameObject newEnemy = Instantiate(fox_enemy, spawnpoints[randomSpawnpoint].transform.position, Quaternion.identity);

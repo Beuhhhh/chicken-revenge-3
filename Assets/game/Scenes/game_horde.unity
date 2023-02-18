@@ -5980,11 +5980,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2127830154549022802, guid: 611480d1a7128274782ab3f80ac3c5a2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.79
+      value: -4420
       objectReference: {fileID: 0}
     - target: {fileID: 2127830154549022802, guid: 611480d1a7128274782ab3f80ac3c5a2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.23
+      value: -2625
       objectReference: {fileID: 0}
     - target: {fileID: 2127830154549022802, guid: 611480d1a7128274782ab3f80ac3c5a2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6652,6 +6652,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 230cd01ae60e7e44b9639541fd13d8ed, type: 3}
+--- !u!1 &1779942903 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2127830154549022806, guid: 611480d1a7128274782ab3f80ac3c5a2, type: 3}
+  m_PrefabInstance: {fileID: 732602686}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1854967744
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6738,7 +6743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff57f64572a8ff4cbe563657a47a28e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fox_enemy: {fileID: 2127830154549022806, guid: 611480d1a7128274782ab3f80ac3c5a2, type: 3}
+  fox_enemy: {fileID: 1779942903}
   spawnpoints: []
 --- !u!4 &1866635486
 Transform:

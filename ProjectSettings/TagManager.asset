@@ -11,6 +11,7 @@ TagManager:
   - down
   - spawnpoint
   - fox
+  - player
   layers:
   - Default
   - TransparentFX
