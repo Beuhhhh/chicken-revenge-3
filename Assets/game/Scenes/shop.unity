@@ -5666,7 +5666,7 @@ GameObject:
   - component: {fileID: 756461200}
   m_Layer: 0
   m_Name: shopkeeper
-  m_TagString: shopkeeper
+  m_TagString: fox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5695,7 +5695,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 756461195}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -5749,9 +5749,9 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1165748932}
   dialogueText: {fileID: 1262673288}
   dialogue:
-  - moi
-  - heu
-  - dasdasd
+  - moimoimoimoimoimoimoimoi
+  - moimoimoimoimoimoimoimoimoimoimoimoi
+  - moimoimoimoimoimoimoimoi
   wordSpeed: 0.06
   playerIsClose: 1
 --- !u!1 &866210111 stripped

@@ -20,6 +20,8 @@ public class shopkeeper : MonoBehaviour
     void Start()
     {
         dialogueText.text = "";
+        dialoguePanel.SetActive(false);
+
     }
 
 
@@ -33,15 +35,18 @@ public class shopkeeper : MonoBehaviour
         {
             if (!dialoguePanel.activeInHierarchy)
             {
+
                 dialoguePanel.SetActive(true);
                 StartCoroutine(Typing());
             }
+
             else if (dialogueText.text == dialogue[index])
             {
                 NextLine();
+
             }
         }
-        if (Input.GetKeyDown(KeyCode.E) && dialoguePanel.activeInHierarchy)
+        if (Input.GetKeyDown(KeyCode.Q) && dialoguePanel.activeInHierarchy)
         {
             RemoveText();
         }
