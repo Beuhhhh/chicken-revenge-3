@@ -16,6 +16,9 @@ public class chicken_movement : MonoBehaviour
     [SerializeField]
     public GameObject bullet;
 
+    public static bool freeze = false;
+
+
 
 
     public string direction = "up";
@@ -23,10 +26,12 @@ public class chicken_movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
     }
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
@@ -71,7 +76,11 @@ public class chicken_movement : MonoBehaviour
             transform.localScale = new Vector3(-3, 3, 3);
         }
 
+
     }
+
+
+
 
 
 }

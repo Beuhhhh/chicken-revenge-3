@@ -20,7 +20,7 @@ public class teleporter_shop : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
 
-        //if player collides for 2 seconds start level game_horde
+        //if player collides for 2 seconds start level shop
         if (col.gameObject.tag == "player")
         {
             Application.LoadLevel("shop");

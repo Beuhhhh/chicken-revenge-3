@@ -76,6 +76,8 @@ public class fox_ai_movement : MonoBehaviour
             animator.SetTrigger("move_down");
         }
 
+        
+
 
         // fox shows fox_up sprite when moving up
 
