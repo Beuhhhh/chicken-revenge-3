@@ -40,7 +40,7 @@ public class chicken_movement : MonoBehaviour
             up.SetActive(true);
             down.SetActive(false);
             side.SetActive(false);
-            transform.localScale = new Vector3(4, 4, 4);
+            transform.localScale = new Vector3(3, 3, 3);
         }
         if (Input.GetKey(KeyCode.S))
         {
@@ -49,7 +49,7 @@ public class chicken_movement : MonoBehaviour
             up.SetActive(false);
             side.SetActive(false);
             down.SetActive(true);
-            transform.localScale = new Vector3(4, 4, 4);
+            transform.localScale = new Vector3(3, 3, 3);
         }
         if (Input.GetKey(KeyCode.A))
         {
@@ -58,7 +58,7 @@ public class chicken_movement : MonoBehaviour
             up.SetActive(false);
             down.SetActive(false);
             side.SetActive(true);
-            transform.localScale = new Vector3(4, 4, 4);
+            transform.localScale = new Vector3(3, 3, 3);
         }
         if (Input.GetKey(KeyCode.D))
         {
@@ -68,7 +68,7 @@ public class chicken_movement : MonoBehaviour
             up.SetActive(false);
             down.SetActive(false);
             side.SetActive(true);
-            transform.localScale = new Vector3(-4, 4, 4);
+            transform.localScale = new Vector3(-3, 3, 3);
         }
 
     }
