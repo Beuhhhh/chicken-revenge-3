@@ -12,6 +12,7 @@ TagManager:
   - spawnpoint
   - fox
   - player
+  - shopkeeper
   layers:
   - Default
   - TransparentFX

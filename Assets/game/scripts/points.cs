@@ -14,5 +14,6 @@ public class points : MonoBehaviour
     void Update()
     {
         
+        
     }
 }
