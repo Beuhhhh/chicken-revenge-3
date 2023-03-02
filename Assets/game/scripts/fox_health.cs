@@ -8,17 +8,13 @@ public class fox_health : MonoBehaviour
     public int health = 3;
     public bool bullet_hit_fox = false;
     public GameObject blood_s;
-    // public GameObject fox;
-    // public GameObject bullet;
+
 
     // Start is called before the first frame update
     void Start()
     {
 
-
-
     }
-
     // Update is called once per frame
     void Update()
 
@@ -30,8 +26,6 @@ public class fox_health : MonoBehaviour
             Destroy(gameObject);
             Instantiate(blood_s, transform.position, Quaternion.identity);
 
-
-
         }
         if (bullet_hit_fox == true)
         {
@@ -39,18 +33,9 @@ public class fox_health : MonoBehaviour
             bullet_hit_fox = false;
         }
 
+
     }
-    // on bullet collision bullet_hit_fox = true
-    // void OnCollisionEnter2D(Collision2D collision)
-    // {
 
-    //     if (collision.gameObject.tag == "bullet")
-    //     {
-    //         bullet_hit_fox = true;
-
-    //     }
-
-    // }
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "bullet")

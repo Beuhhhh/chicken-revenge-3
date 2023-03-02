@@ -10,11 +10,15 @@ public class shopkeeper : MonoBehaviour
 {
 
     public GameObject dialoguePanel;
+    public GameObject shopPanel;
     public Text dialogueText;
     public string[] dialogue;
     private int index = 0;
     public float wordSpeed;
     public bool playerIsClose;
+
+
+
 
     void Start()
     {
@@ -94,4 +98,20 @@ public class shopkeeper : MonoBehaviour
             RemoveText();
         }
     }
+
+
+    //ask user if theyd like to see the shop	
+    //if yes, open shop
+    //if no, close shop
+    public void OpenShop()
+    {
+        shopPanel.SetActive(true);
+    }
+    public void CloseShop()
+    {
+        shopPanel.SetActive(false);
+    }
+
+
+
 }
