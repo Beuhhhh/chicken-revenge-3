@@ -2,55 +2,96 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+
 
 public class shopkeeper : MonoBehaviour
+
 {
+
     public GameObject dialoguePanel;
     public Text dialogueText;
-    public string dialogue;
-    private int index;
+    public string[] dialogue;
+    private int index = 0;
+    public float wordSpeed;
     public bool playerIsClose;
-    // Start is called before the first frame update
+
     void Start()
     {
+        dialogueText.text = "";
         dialoguePanel.SetActive(false);
-
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+
+    // Update is called once per frame
+
+    void Update()
+
     {
-        if (collision.gameObject.tag == "player")
+        if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
+        {
+            if (!dialoguePanel.activeInHierarchy)
+            {
+
+                dialoguePanel.SetActive(true);
+                StartCoroutine(Typing());
+            }
+
+            else if (dialogueText.text == dialogue[index])
+            {
+                NextLine();
+
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Q) && dialoguePanel.activeInHierarchy)
+        {
+            RemoveText();
+        }
+    }
+    public void RemoveText()
+    {
+        dialogueText.text = "";
+        index = 0;
+        dialoguePanel.SetActive(false);
+    }
+
+    IEnumerator Typing()
+    {
+        foreach (char letter in dialogue[index].ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(wordSpeed);
+        }
+    }
+    public void NextLine()
+    {
+        if (index < dialogue.Length - 1)
+        {
+            index++;
+            dialogueText.text = "";
+            StartCoroutine(Typing());
+        }
+        else
+        {
+            RemoveText();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("player"))
         {
             playerIsClose = true;
         }
     }
-
-    private void Update()
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if (playerIsClose)
+        if (other.CompareTag("player"))
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                if (dialoguePanel.activeInHierarchy)
-                {
-                    index++;
-                    if (index >= dialogue.Length)
-                    {
-                        dialoguePanel.SetActive(false);
-                    }
-                    else
-                    {
-                        dialogueText.text = dialogue.Substring(0, index);
-                    }
-                }
-                else
-                {
-                    dialoguePanel.SetActive(true);
-                    index = 1;
-                    dialogueText.text = dialogue.Substring(0, index);
-                }
-            }
+            playerIsClose = false;
+            RemoveText();
         }
     }
 }
