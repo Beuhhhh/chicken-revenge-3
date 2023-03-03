@@ -14,6 +14,7 @@ public class fox_health : MonoBehaviour
     void Start()
     {
 
+
     }
     // Update is called once per frame
     void Update()
@@ -26,23 +27,24 @@ public class fox_health : MonoBehaviour
             Destroy(gameObject);
             Instantiate(blood_s, transform.position, Quaternion.identity);
 
+
+
         }
         if (bullet_hit_fox == true)
         {
             health -= 1;
-            bullet_hit_fox = false;
+
         }
 
-
-    }
-
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "bullet")
+        void OnTriggerEnter2D(Collider2D col)
         {
-            bullet_hit_fox = true;
-            Destroy(col.gameObject);
-        }
+            if (col.gameObject.tag == "bullet")
+            {
+                bullet_hit_fox = true;
+                Destroy(col.gameObject);
+            }
 
+
+        }
     }
 }

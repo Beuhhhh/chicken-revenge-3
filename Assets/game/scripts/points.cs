@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class points : MonoBehaviour
 {
+
+
     // Start is called before the first frame update
     void Start()
     {
+
+
 
     }
 
@@ -15,4 +19,5 @@ public class points : MonoBehaviour
     {
 
     }
+
 }

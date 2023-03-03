@@ -49,10 +49,7 @@ public class shopkeeper : MonoBehaviour
 
             }
         }
-        if (Input.GetKeyDown(KeyCode.Q) && dialoguePanel.activeInHierarchy)
-        {
-            RemoveText();
-        }
+
     }
     public void RemoveText()
     {
@@ -98,20 +95,20 @@ public class shopkeeper : MonoBehaviour
             RemoveText();
         }
     }
-
-
-    //ask user if theyd like to see the shop	
-    //if yes, open shop
-    //if no, close shop
-    public void OpenShop()
-    {
-        shopPanel.SetActive(true);
-    }
-    public void CloseShop()
-    {
-        shopPanel.SetActive(false);
-    }
-
-
-
 }
+
+//ask user if theyd like to see the shop	
+//if yes, open shop
+//if no, close shop
+//     public void OpenShop()
+//     {
+//         shopPanel.SetActive(true);
+//     }
+//     public void CloseShop()
+//     {
+//         shopPanel.SetActive(false);
+//     }
+
+
+
+// }
