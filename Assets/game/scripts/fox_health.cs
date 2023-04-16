@@ -20,6 +20,7 @@ public class fox_health : MonoBehaviour
         if (bullet_hit_fox == true)
         {
             health -= 1;
+            bullet_hit_fox = false;
         }
     }
 
@@ -27,8 +28,8 @@ public class fox_health : MonoBehaviour
     {
         if (col.gameObject.tag == "bullet")
         {
-            bullet_hit_fox = true;
             Destroy(col.gameObject);
+            bullet_hit_fox = true;
         }
     }
 }
