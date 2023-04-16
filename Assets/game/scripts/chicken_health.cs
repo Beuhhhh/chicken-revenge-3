@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class chicken_health : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class chicken_health : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+            SceneManager.LoadScene("menu");
         }
         if (fox_damage == true)
         {
