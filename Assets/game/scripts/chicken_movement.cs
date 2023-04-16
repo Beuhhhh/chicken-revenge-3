@@ -70,8 +70,5 @@ public class chicken_movement : MonoBehaviour
             side.SetActive(true);
             transform.localScale = new Vector3(-3, 3, 3);
         }
-
     }
-
-
 }
